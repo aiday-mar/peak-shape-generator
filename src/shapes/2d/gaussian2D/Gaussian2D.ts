@@ -13,6 +13,7 @@ export interface XYNumber {
 }
 
 interface CalculateGaussian2DHeightOptions {
+  /** standard deviation */
   sd?: number | XYNumber;
   /**
    * @default 50

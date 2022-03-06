@@ -9,13 +9,18 @@ import type { Shape1DClass } from '../Shape1DClass';
 
 interface CalculateGaussianHeightOptions {
   /**
+   * Full width at maximum height 
    * @default 500
    */
   fwhm?: number;
   /**
+   * Area of gaussian
    * @default 1
    */
   area?: number;
+  /**
+   * Standard deviation
+   */
   sd?: number;
 }
 
@@ -113,7 +118,11 @@ export function calculateGaussianHeight(
  * @param fwhm
  * @returns y
  */
-export function gaussianFct(x: number, fwhm: number) {
+export function gaussianFct(
+  /** Value in which to evaluate gaussian */
+  x: number, 
+  /** Full width at maximum height */
+  fwhm: number) {
   return Math.exp(GAUSSIAN_EXP_FACTOR * Math.pow(x / fwhm, 2));
 }
 

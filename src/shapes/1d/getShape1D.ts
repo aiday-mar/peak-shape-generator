@@ -4,9 +4,11 @@ import { Lorentzian } from './lorentzian/Lorentzian';
 import { PseudoVoigt } from './pseudoVoigt/PseudoVoigt';
 
 /**
- * Generate a instance of a specific kind of shape.
+ * Generate an instance of a specific kind of shape.
  */
-export function getShape1D(shape: Shape1D) {
+export function getShape1D(
+  /** Kind of shape from which to create a shape */
+  shape: Shape1D) {
   const { kind } = shape;
 
   switch (kind) {

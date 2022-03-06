@@ -55,6 +55,7 @@ interface CalculatePseudoVoightHeightOptions {
 }
 
 export class PseudoVoigt implements Shape1DClass {
+  /** Full width at maximum height */
   public fwhm: number;
   /**
    * Ratio of gaussian contribution in the shape

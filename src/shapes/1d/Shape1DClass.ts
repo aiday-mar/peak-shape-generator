@@ -3,6 +3,7 @@ import { DoubleArray } from 'cheminfo-types';
 import { GetData1DOptions } from './GetData1DOptions';
 
 export interface Shape1DClass {
+  /** Full width at maximum height */
   fwhm: number;
   /**
    * Calculate the height depending of fwhm and area.
